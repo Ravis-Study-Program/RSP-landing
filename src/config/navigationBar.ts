@@ -41,7 +41,7 @@ export const navigationBarData: NavData = {
 		{ name: 'Home', link: '#intro' },
 		{ name: 'Alumni', link: '#companies' },
 		{ name: 'Features', link: '#features' },
-		{ name: 'FAQ', link: '#faq' },
+		{ name: 'FAQ', link: '#faq' }
 	],
 	navActions: [{ name: 'Donate', link: '/', style: 'primary', size: 'lg' }]
 }

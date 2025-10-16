@@ -1,0 +1,57 @@
+---
+// Company Feature Section with sticky sidebar
+// ------------
+// Description: A section with the header as a sticky sidebar and company features with company images/logos and descriptions in a 3 column layout.
+
+// Components
+// - Layout
+import Row from '../../ui/Row.astro'
+import Col from '../../ui/Col.astro'
+import StickySidebar from '../basic/StickySidebar.astro'
+import ChipNotification from '../../ui/ChipNotification.astro'
+import { Image } from 'astro:assets'
+
+// Props
+type CompanyData = {
+	name: string
+	logo: string
+}
+type Props = {
+	title: string
+	text?: string
+	data: CompanyData[]
+	classes?: string
+}
+const { title, text, data, classes } = Astro.props
+---
+
+<StickySidebar classes={classes}>
+	<header slot="sidebar">
+		{title && <h2>{title}</h2>}
+		{text && <p class="text-lg leading-relaxed">{text}</p>}
+	</header>
+
+	<!-- <ChipNotification radius="rounded-full" classes="mb-6">
+		<strong>Bootcamp</strong>
+	</ChipNotification>
+	<h1>A <strong>No-Cost</strong> Coding Bootcamp</h1> -->
+
+	<Row>
+		{
+			data.map((company: CompanyData) => (
+				<Col span="3">
+					<div class="company-logo ml-10 mb-8 flex items-center justify-center">
+						<Image 
+							src={company.logo} 
+							alt={company.name}
+							width={120}
+							height={40}
+							class="h-10 w-auto object-contain"
+							loading="lazy"
+						/>
+					</div>
+				</Col>
+			))
+		}
+	</Row>
+</StickySidebar>

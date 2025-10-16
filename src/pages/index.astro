@@ -1,0 +1,30 @@
+---
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+// - UI
+import Hero from '../components/blocks/hero/HomeCTA.astro'
+import Features from '../components/blocks/features/FeatureCards.astro'
+import HighlightBlocks from '../components/blocks/highlights/HightlightRows.astro'
+import CTA from '../components/blocks/CTA/BasicDark.astro'
+import PricingFAQ from '../components/blocks/FAQ/PricingFAQ.astro'
+
+// Content
+// - Testimonial background
+import testimonialBackground from '../assets/testimonial-bg-01.webp'
+import CompaniesList from '../components/blocks/companies/CompaniesList.astro'
+import StatsRow from '../components/blocks/stats/StatsRow.astro'
+
+// - SEO
+const SEO = {
+	title: "Ravi's Study Program - Free intensive coding bootcamp",
+	description: "Ravi's Study Program is a free intensive coding bootcamp that helps students land their big tech FAANG companies within 3 months.	"
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero />
+	<CompaniesList />
+	<Features />
+	<PricingFAQ />
+</Layout>

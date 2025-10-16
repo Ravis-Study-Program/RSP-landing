@@ -1,0 +1,30 @@
+---
+// Basic Light Call To Action section
+// ------------
+// Description: A centered call to action section that contains: a title, text, a rating and a button.
+
+// Components
+// - Layout
+import Col from '../../ui/Col.astro'
+import Row from '../../ui/Row.astro'
+import Section from '../../ui/Section.astro'
+// - UI
+import Button from '../../ui/Button.astro'
+import CTA from '../../ui/CTA.astro'
+---
+
+<Section>
+	<Row>
+		<Col span="1" />
+		<Col span="10">
+			<CTA
+				title="Join the Foxi Revolution!"
+				text="Discover why thousands of professionals trust our platform to streamline their workflow and enhance productivity. Get started today and see the difference for yourself!"
+				classes="!shadow-none"
+			>
+				<Button size="lg" style="primary"> Get started now! </Button>
+			</CTA>
+		</Col>
+		<Col span="1" />
+	</Row>
+</Section>

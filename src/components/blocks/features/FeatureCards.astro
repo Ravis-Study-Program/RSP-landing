@@ -1,0 +1,69 @@
+---
+// Feature Cards grid Section
+// ------------
+// Description: A grid of cards with feature information in a 4 column layout.
+
+// Components
+// - Layout
+import Section from '../../ui/Section.astro'
+import Row from '../../ui/Row.astro'
+import Col from '../../ui/Col.astro'
+// - UI
+import Card from '../../ui/cards/FeatureCard.astro'
+
+// Content
+// - Cards
+import feature01 from '../../../assets/cards/feature-01.svg'
+import feature02 from '../../../assets/cards/feature-02.svg'
+import feature03 from '../../../assets/cards/feature-03.svg'
+import feature04 from '../../../assets/cards/feature-04.svg'
+import feature05 from '../../../assets/cards/feature-05.svg'
+import ChipNotification from '../../ui/ChipNotification.astro'
+---
+
+<Section id="features">
+	<Row>
+		<Col span="12" align="center" classes="mb-12 max-w-4xl mx-auto">
+			<ChipNotification radius="rounded-full" classes="mb-6">
+				<strong>Features</strong>
+			</ChipNotification>
+			<h2 class="text-pretty">Why This Bootcamp <strong>Stands Out</strong></h2>
+			<p class="pb-0 text-lg">
+				We run RSP bootcamp every Australian summer, from November to February.
+			</p>
+		</Col>
+	</Row>
+	<Row>
+		<Col span="4">
+			<Card
+				title="Zero Cost / No Hidden Fees"
+				subtitle="We believe in access over profit. Our goal is to level up the software engineering talent pool in Australia."
+				image={feature01}
+			/>
+		</Col>
+		<Col span="4" classes="flex flex-col gap-6">
+			<Card
+				title="Structured Hurdles"
+				subtitle="It's not easy. Our bootcamp have strict hurdles you must complete to graduate from the program."
+				image={feature02}
+			/>
+			<Card
+				title="Sunday Seminars"
+				subtitle="We host biweekly virtual seminars on Sundays with various topics such as applications, mock interviews and resume master classrooms."
+				image={feature03}
+			/>
+		</Col>
+		<Col span="4" classes="flex flex-col gap-6">
+			<Card
+				title="Mentors from Big Tech/HFTs"
+				subtitle="Our mentors are living testimonials of previous RSP success. Each student will get a mentor and personalised advice throughout the entire program."
+				image={feature04}
+			/>
+			<Card
+				title="Community Discussions"
+				subtitle="Enrolled students are invited into a discord server with RSP alumni for networking and community discussions."
+				image={feature05}
+			/>
+		</Col>
+	</Row>
+</Section>

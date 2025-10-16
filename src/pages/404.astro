@@ -1,0 +1,40 @@
+---
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+import Section from '../components/ui/Section.astro'
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
+// - UI
+import Spacer from '../components/ui/Spacer.astro'
+import Button from '../components/ui/Button.astro'
+import { Icon } from 'astro-icon/components'
+
+// Content
+// - SEO
+const SEO = {
+	title: "Ravi's Study Program - 404 Page Not Found",
+	description: "Ravi's Study Program is a free intensive coding bootcamp that helps students land their big tech FAANG companies within 3 months.	"
+
+}
+---
+
+<Layout title={SEO.title} description={SEO.description} classes='min-h-screen'>
+	<Section classes='flex items-center'>
+		<Row flex classes="text-center mb-10">
+			<Col span="2" />
+			<Col span="8">
+				<h1>Page Not Found</h1>
+			</Col>
+			<Col span="2" />
+		</Row>
+		<Row flex classes="text-center items-center justify-center">
+			<Col span="2" />
+			<Col span="8">
+				<Spacer size="2" desktopSize="4" />
+				<Button link="/"> Return to homepage <Icon name="long-arrow-right" /> </Button>
+			</Col>
+			<Col span="2" />
+		</Row>
+	</Section>
+</Layout>

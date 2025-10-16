@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Microsoft",
+    "logo": "/companies/microsoft.png"
+  },
+  {
+    "name": "Amazon",
+    "logo": "/companies/aws.png"
+  },
+  {
+    "name": "Meta",
+    "logo": "/companies/meta.png"
+  },
+  {
+    "name": "Jane Street",
+    "logo": "/companies/janestreet.png"
+  },
+  {
+    "name": "Google",
+    "logo": "/companies/google.png"
+  },
+  {
+    "name": "Citadel",
+    "logo": "/companies/citadel.png"
+  },
+  {
+    "name": "Optiver",
+    "logo": "/companies/optiver.png"
+  },
+  {
+    "name": "Palantir",
+    "logo": "/companies/palantir.png"
+  },
+  {
+    "name": "IMC Trading",
+    "logo": "/companies/imc.png"
+  },
+  {
+    "name": "Canva",
+    "logo": "/companies/canva.png"
+  },
+  {
+    "name": "Atlassian",
+    "logo": "/companies/atlassian.png"
+  },
+  {
+    "name": "Tiktok",
+    "logo": "/companies/tiktok.png"
+  }
+
+]

@@ -1,0 +1,51 @@
+---
+// Home page CTA Section
+// ------------
+// Description: A centered call to action section that contains: a title, text, a user review snippet, a button and a image.
+
+// Components
+// - Layout
+import Col from '../../ui/Col.astro'
+import Row from '../../ui/Row.astro'
+import Section from '../../ui/Section.astro'
+// - UI
+import { Image } from 'astro:assets'
+import Button from '../../ui/Button.astro'
+import ChipNotification from '../../ui/ChipNotification.astro'
+
+// Content
+// - Hero Image
+import heroImage from '../../../assets/landing.webp'
+import StatsRow from '../stats/StatsRow.astro'
+---
+
+<Section id="intro" padding="top">
+	<Row>
+		<Col span="2" />
+		<Col span="8" align="center">
+			<ChipNotification radius="rounded-full" classes="mb-6">
+				<strong>Bootcamp</strong>
+			</ChipNotification>
+			<h1>A <strong>No-Cost</strong> Coding Bootcamp</h1>
+
+			<p class="pb-0 text-lg">
+				Ravi's Study Program is a 13-weeks intensive free bootcamp that prepares you to land big
+				tech software engineering internship and graduate jobs.
+			</p>
+			<Button size="lg" link="/">Login</Button>
+			<Button size="lg" classes="ml-2" style="secondary" link="/">Watch Video</Button>
+		</Col>
+		<Col span="2" />
+		<Col span="1" />
+		<Col span="10">
+			<Image
+				src={heroImage}
+				alt="RSP BBQ image"
+				class="w-full translate-y-8 rounded-lg shadow-2xl shadow-neutral-200"
+				format="webp"
+			/></Col
+		>
+		<Col span="1" />
+	</Row>
+	<StatsRow />
+</Section>

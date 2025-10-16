@@ -1,0 +1,16 @@
+---
+// Main
+// ------------
+// Description: the main content area of the page
+
+// Props
+type Props = {
+	classes?: string
+}
+
+const { classes } = Astro.props
+---
+
+<main class:list={[classes]}>
+	<slot />
+</main>

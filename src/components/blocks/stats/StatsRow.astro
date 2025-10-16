@@ -20,37 +20,35 @@ const { classes } = Astro.props
 // Sample stats data - you can customize these
 const statsData = [
 	{
-		number: "350",
-		suffix: "+",
-		label: "Total Offers"
+		number: '350',
+		suffix: '+',
+		label: 'Total Offers'
 	},
 	{
-		number: "170",
-		suffix: "+",
-		label: "Big Tech Offers"
+		number: '170',
+		suffix: '+',
+		label: 'Big Tech Offers'
 	},
 	{
-		number: "30",
-		suffix: "%",
-		label: "Google Sydney 2022 Interns were RSP graduates"
+		number: '30',
+		suffix: '%',
+		label: 'Google Sydney 2022 Interns were RSP graduates'
 	},
 	{
-		number: "332",
-		label: "RSP Graduates"
+		number: '332',
+		label: 'RSP Graduates'
 	}
 ]
 ---
 
 <Section id="stats" classes={classes}>
 	<Row>
-		{statsData.map((stat) => (
-			<Col span="3">
-				<StatsCard 
-					number={stat.number}
-					suffix={stat.suffix}
-					label={stat.label}
-				/>
-			</Col>
-		))}
+		{
+			statsData.map((stat) => (
+				<Col span="3">
+					<StatsCard number={stat.number} suffix={stat.suffix} label={stat.label} />
+				</Col>
+			))
+		}
 	</Row>
 </Section>

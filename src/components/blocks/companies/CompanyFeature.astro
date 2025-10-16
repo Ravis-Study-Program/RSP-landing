@@ -5,11 +5,10 @@
 
 // Components
 // - Layout
-import Row from '../../ui/Row.astro'
-import Col from '../../ui/Col.astro'
-import StickySidebar from '../basic/StickySidebar.astro'
-import ChipNotification from '../../ui/ChipNotification.astro'
 import { Image } from 'astro:assets'
+import Col from '../../ui/Col.astro'
+import Row from '../../ui/Row.astro'
+import StickySidebar from '../basic/StickySidebar.astro'
 
 // Props
 type CompanyData = {
@@ -40,9 +39,9 @@ const { title, text, data, classes } = Astro.props
 		{
 			data.map((company: CompanyData) => (
 				<Col span="3">
-					<div class="company-logo ml-10 mb-8 flex items-center justify-center">
-						<Image 
-							src={company.logo} 
+					<div class="company-logo mb-8 ml-10 flex items-center justify-center">
+						<Image
+							src={company.logo}
 							alt={company.name}
 							width={120}
 							height={40}

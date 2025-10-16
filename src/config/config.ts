@@ -7,7 +7,6 @@ export interface Logo {
 	alt: string
 }
 
-
 export interface Config {
 	siteTitle: string
 	siteDescription: string

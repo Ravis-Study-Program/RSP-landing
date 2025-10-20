@@ -39,7 +39,7 @@ const { title, text, data, classes } = Astro.props
 		{
 			data.map((company: CompanyData) => (
 				<Col span="3">
-					<div class="company-logo mb-8 lg:ml-10 flex items-center justify-center">
+					<div class="company-logo mb-8 flex items-center justify-center lg:ml-10">
 						<Image
 							src={company.logo}
 							alt={company.name}

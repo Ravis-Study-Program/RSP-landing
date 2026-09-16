@@ -17,7 +17,25 @@ type Props = {
 	type?: 'left' | 'right'
 	classes?: string
 }
+import { RSP_INFO_SESSION_URL, RSP_PUBLIC_DRIVE_LINK } from '../../../config/media'
 const { title, text, data, type = 'left', classes } = Astro.props
+
+// Resolve placeholder keys in data to actual URLs
+const resolveLink = (link?: string) => {
+	if (link === 'RSP_INFO_SESSION_URL') return RSP_INFO_SESSION_URL
+	if (link === 'RSP_PUBLIC_DRIVE_LINK') return RSP_PUBLIC_DRIVE_LINK
+	return link
+}
+
+const resolvedData = (data || []).map((entry: any) => {
+	if (entry && entry.heading && Array.isArray(entry.items)) {
+		return {
+			...entry,
+			items: entry.items.map((faq: any) => ({ ...faq, link: resolveLink(faq.link) }))
+		}
+	}
+	return { ...entry, link: resolveLink(entry.link) }
+})
 ---
 
 <StickySidebar classes={classes} type={type}>
@@ -26,7 +44,38 @@ const { title, text, data, type = 'left', classes } = Astro.props
 		{text && <p class="text-lg leading-relaxed">{text}</p>}
 	</header>
 
-	<Card classes="divide-y divide-neutral-100 ">
-		{data.map((faq: any) => <FAQ title={faq.question} text={faq.reply} open={faq.open} />)}
-	</Card>
+	{
+		resolvedData.length > 0 && resolvedData[0].heading ? (
+			<div class="flex flex-col gap-4">
+				{resolvedData.map((group: any) => (
+					<Card>
+						<h3 class="mb-0 px-6 pb-2 pt-4 text-xl font-semibold">{group.heading}</h3>
+						<div class="divide-y divide-neutral-100">
+							{group.items.map((faq: any) => (
+								<FAQ
+									title={faq.question}
+									text={faq.reply}
+									open={faq.open}
+									link={faq.link}
+									linkLabel={faq.linkLabel}
+								/>
+							))}
+						</div>
+					</Card>
+				))}
+			</div>
+		) : (
+			<Card classes="divide-y divide-neutral-100">
+				{resolvedData.map((faq: any) => (
+					<FAQ
+						title={faq.question}
+						text={faq.reply}
+						open={faq.open}
+						link={faq.link}
+						linkLabel={faq.linkLabel}
+					/>
+				))}
+			</Card>
+		)
+	}
 </StickySidebar>

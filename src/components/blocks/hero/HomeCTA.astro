@@ -17,6 +17,7 @@ import ChipNotification from '../../ui/ChipNotification.astro'
 // - Hero Image
 import heroImage from '../../../assets/landing.webp'
 import StatsRow from '../stats/StatsRow.astro'
+import { RSP_INFO_SESSION_URL } from '../../../config/media'
 ---
 
 <Section id="intro" padding="top">
@@ -42,7 +43,7 @@ import StatsRow from '../stats/StatsRow.astro'
 				<Button
 					size="lg"
 					classes="w-full lg:w-auto max-w-80 lg:flex-initial"
-					link="https://www.youtube.com/watch?v=_jwvoVFWWnA">Watch Video</Button
+					link={RSP_INFO_SESSION_URL}>Watch Video</Button
 				>
 			</div>
 		</Col>

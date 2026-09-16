@@ -1,0 +1,39 @@
+---
+// Pricing FAQ component
+// ------------
+// Description: FAQ groups for pricing and program duration questions
+
+// Components
+import FAQ from './FaqSticky.astro'
+
+// Data
+import faqData from '../../../data/json-files/faqData.json'
+import Section from '../../ui/Section.astro'
+
+// Filter FAQ data for pricing and duration categories
+const faqPricing = faqData.filter((faq) => faq.category === 'top')
+const faqDuration = faqData.filter((faq) => faq.category === 'duration')
+const faqApplications = faqData.filter((faq) => faq.category === 'applications')
+
+// Grouped data so both categories render in the same FAQ section
+const groupedFaq = [
+	{ heading: 'Top Questions', items: faqPricing },
+	{ heading: 'Applications', items: faqApplications },
+	{ heading: 'Duration', items: faqDuration }
+]
+
+// Props
+type Props = {
+	classes?: string
+}
+const { classes } = Astro.props
+---
+
+<Section id="faq" classes="bg-neutral-50">
+	<FAQ
+		title="Frequently Asked Questions"
+		text="Got questions? We've got answers. Explore our FAQs to learn more about how everything works."
+		data={groupedFaq}
+		classes={classes}
+	/>
+</Section>

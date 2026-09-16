@@ -19,12 +19,16 @@ type Props = {
 	text: string
 	open?: boolean
 	classes?: string
+	link?: string
+	linkLabel?: string
 }
 const {
 	title = 'Foxi. Tailwind CSS Astro Starter Kit by Oxygenna',
 	text = 'Foxi is a design and development agency that specializes in creating beautiful and functional websites.',
 	open = false,
-	classes
+	classes,
+	link,
+	linkLabel = 'Watch the info session'
 } = Astro.props
 ---
 
@@ -36,9 +40,23 @@ const {
 		{title}
 		<Icon name="plus" class="accordion__icon" />
 	</summary>
-	<p class="accordion__text">
-		{text}
-	</p>
+	<div class="accordion__text">
+		<p>{text}</p>
+		{
+			link && (
+				<p class="mt-3">
+					<a
+						href={link}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-primary-600 hover:underline"
+					>
+						{linkLabel}
+					</a>
+				</p>
+			)
+		}
+	</div>
 </details>
 
 <style>

@@ -1,8 +1,71 @@
 [
 	{
-		"question": "How much does it actually cost?",
-		"reply": "Ravi's Study Program (RSP) is free forever. We do accept optional donations to help keep the platform running and improve new features, but that's entirely up to you.",
-		"category": "pricing",
+		"question": "How much does RSP cost?",
+		"reply": "Ravi's Study Program (RSP) is free and always will be. Optional donations help us keep the platform running and develop new features, but there is no obligation to donate.",
+		"category": "top",
+		"open": false
+	},
+	{
+		"question": "Who is eligible to apply for RSP?",
+		"reply": "Everyone is welcome to apply, although the program is primarily designed to support first- and second-year university students.",
+		"category": "top",
+		"open": false
+	},
+	{
+		"question": "How long does the program run?",
+		"reply": "RSP runs over 13 weeks during the Australian summer break, usually from late November to mid-February.",
+		"category": "duration",
+		"open": false
+	},
+	{
+		"question": "Is there a break over the holiday period?",
+		"reply": "Yes. The program pauses for one week over Christmas so participants can enjoy the holidays and recharge before returning.",
+		"category": "duration",
+		"open": false
+	},
+	{
+		"question": "How much time should I commit each week?",
+		"reply": "You should plan to dedicate at least 30 hours per week to the program. Before applying, consider whether you can fit this commitment around your other responsibilities.",
+		"category": "duration",
+		"open": false
+	},
+	{
+		"question": "Can I participate if I have other commitments over summer?",
+		"reply": "Yes, provided you can still meet the program's expected commitment of at least 30 hours per week. Consider how work, study, travel and other responsibilities may affect your availability throughout the program.",
+		"category": "top",
+		"open": false
+	},
+	{
+		"question": "Does completing RSP guarantee employment?",
+		"reply": "No. RSP helps you develop skills and gain experience that can strengthen your job applications, but completing the program does not guarantee employment.",
+		"category": "top",
+		"open": false
+	},
+	{
+		"question": "Where can I learn more about the program and its requirements?",
+		"reply": "Our information session covers the program and its requirements to help you decide whether RSP is right for you.",
+		"link": "RSP_INFO_SESSION_URL",
+		"category": "top",
+		"open": false
+	},
+	{
+		"question": "What can I do if my application is unsuccessful?",
+		"reply": "We receive more applications each year than we have places available. If you are not accepted, you can still access our learning resources online, explore other learning opportunities and apply again in a future year.",
+		"category": "applications",
+		"open": false
+	},
+	{
+		"question": "Can I access the learning resources without joining the program?",
+		"reply": "Yes. All of our learning resources are available online, even if you are not participating in RSP.",
+		"link": "RSP_PUBLIC_DRIVE_LINK",
+		"linkLabel": "Browse the learning resources",
+		"category": "applications",
+		"open": false
+	},
+	{
+		"question": "Can I reapply if I was unsuccessful in a previous year?",
+		"reply": "Yes. We encourage unsuccessful applicants to apply again in future years.",
+		"category": "applications",
 		"open": false
 	}
 ]
